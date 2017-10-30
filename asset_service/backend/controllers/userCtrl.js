@@ -10,7 +10,7 @@ exports.list_all_user = function (req, res) {
         if (err)
             res.send(err);
         res.json(user);
-        console.log(user,'user')
+        //console.log(user,'user')
     });
 };
 
@@ -29,7 +29,11 @@ exports.read_a_user = function (req, res) {
         uname: req.params.uname
     }, function (err, user) {
         if (err) res.send(err);
-        res.json(user);
+        var outputJson={
+            //uname:user[0].uname,
+            profile_image:user[0].profile_image
+        }
+        res.json(outputJson);
     });
 };
 

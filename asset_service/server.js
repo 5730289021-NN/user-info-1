@@ -6,8 +6,8 @@ var express = require('express'),
     bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-var portDb = 28017
-var linkdb = 'mongodb://localhost:'+portDb+'/user'
+var portDb = 27017
+var linkdb = 'mongodb://127.0.0.1:'+portDb+'/user'
 mongoose.connect(linkdb);
 console.log(linkdb,'linkdb')
 
