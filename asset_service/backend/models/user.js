@@ -10,6 +10,6 @@ var UserSchema = new Schema({
   profile_image:String,
   last_update:String
 });
+var collectionName='userProfile'
 
-
-module.exports = mongoose.model('userProfile', UserSchema);
+module.exports = mongoose.model('userProfile', UserSchema,collectionName);
